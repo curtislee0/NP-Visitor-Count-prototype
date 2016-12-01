@@ -41,7 +41,7 @@ var parkinfo = d3.select("body").append("div")   //append div to body
     .style("opacity", 0);
 
 // Get the data
-d3.csv("visitorsclk.csv", function(error, data) {
+d3.csv("visitors.csv", function(error, data) {
     data.forEach(function(d) {
 		d.date = parseDate(d.date);
 		d.visitors = +d.visitors;
@@ -111,7 +111,7 @@ d3.csv("visitorsclk.csv", function(error, data) {
     var path = d3.geo.path()
         .projection(projection);    
     
-    d3.json("parks2.json", function(error, park) {
+    d3.json("parks.json", function(error, park) {
         if (error) throw error;
         
         var neededparks = park.objects.npsboundary;
