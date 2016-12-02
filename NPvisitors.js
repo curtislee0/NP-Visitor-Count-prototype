@@ -96,7 +96,7 @@ d3.csv("visitors.csv", function(error, data) {
                 parkinfo.transition()
                     .duration(300)
                     .style("opacity",1);
-                parkinfo.html("<strong>" + d.values.park + "</strong><br/>" + "lots of infomation");
+                parkinfo.html("<strong>" + d.values[0].park + "</strong><br/>" + "lots of infomation");
                 })
             .text(d.key); 
 
